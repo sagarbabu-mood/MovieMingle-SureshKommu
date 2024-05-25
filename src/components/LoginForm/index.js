@@ -155,8 +155,12 @@ class LoginForm extends Component {
   }
 
   render() {
-    const {showSubmitError, errorMsg, registeredPerson, redirectToHome} =
-      this.state
+    const {
+      showSubmitError,
+      errorMsg,
+      registeredPerson,
+      redirectToHome,
+    } = this.state
     if (Cookies.get('jwt_token') || redirectToHome) {
       return <Redirect to="/" />
     }
@@ -196,7 +200,9 @@ class LoginForm extends Component {
               />
               <label htmlFor="remember-me">Remember me</label>
             </div>
-            <a href="">Need help?</a>
+            <button type="button" className="help-link">
+              Need help?
+            </button>
           </div>
           {showSubmitError && <p className="error-message">*{errorMsg}</p>}
           <p>
@@ -204,6 +210,7 @@ class LoginForm extends Component {
               <>
                 Already have an account?
                 <button
+                  type="button"
                   className="rigistredToggle"
                   onClick={this.toggleRegistration}
                 >
@@ -214,6 +221,7 @@ class LoginForm extends Component {
               <>
                 New to WatchNow?
                 <button
+                  type="button"
                   className="rigistredToggle"
                   onClick={this.toggleRegistration}
                 >
@@ -226,9 +234,9 @@ class LoginForm extends Component {
           <small>
             This page is protected by Google reCAPTCHA to ensure you're not a
             bot.
-            <a href="" className="learn-more-link">
+            <button type="button" className="learn-more-link">
               Learn more.
-            </a>
+            </button>
           </small>
         </form>
       </div>

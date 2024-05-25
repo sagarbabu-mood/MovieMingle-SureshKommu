@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import {IoHome, IoReorderThreeOutline} from 'react-icons/io5' // Add this import
+import {
+  IoHome,
+  IoReorderThreeOutline,
+  IoGameController,
+  IoNewspaperOutline,
+} from 'react-icons/io5' // Combine imports
 import {FaFireAlt} from 'react-icons/fa'
 import {RiMovie2Fill} from 'react-icons/ri'
-import {IoGameController} from 'react-icons/io5'
-import {IoNewspaperOutline} from 'react-icons/io5'
 import {GiTrophyCup} from 'react-icons/gi'
 import {IoIosSave} from 'react-icons/io'
 import './SideNavbar.css'

@@ -2,11 +2,10 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
+import {AiOutlineLike, AiOutlineDislike} from 'react-icons/ai'
+import {FaRegSave} from 'react-icons/fa'
 import TopNavbar from '../TopNavbar'
 import SideNavbar from '../SideNavbar'
-import {AiOutlineLike} from 'react-icons/ai'
-import {AiOutlineDislike} from 'react-icons/ai'
-import {FaRegSave} from 'react-icons/fa'
 import './index.css'
 
 class CoursesDetails extends Component {
@@ -66,13 +65,13 @@ class CoursesDetails extends Component {
         <TopNavbar />
         <SideNavbar />
         <div className="home-page1">
-          {isLoading ? (
+          {isLoading && (
             <div className="loader-container">
               <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
             </div>
-          ) : error ? (
-            <div>Error: {error}</div>
-          ) : (
+          )}
+          {!isLoading && error && <div>Error: {error}</div>}
+          {!isLoading && !error && (
             <div className="movie-details">
               <div className="trailer-container">
                 <iframe
@@ -83,7 +82,7 @@ class CoursesDetails extends Component {
                   frameBorder="0"
                   allowFullScreen
                   className="iframe"
-                ></iframe>
+                />
               </div>
               <div className="allDeatails">
                 <div>
@@ -107,18 +106,21 @@ class CoursesDetails extends Component {
                     <button
                       onClick={this.likeBtnPressed}
                       className={liked ? 'active' : ''}
+                      aria-label="Like"
                     >
                       <AiOutlineLike className="icon-l" />
                     </button>
                     <button
                       onClick={this.unlikeBtnPressed}
                       className={disliked ? 'active' : ''}
+                      aria-label="Dislike"
                     >
                       <AiOutlineDislike className="icon-d" />
                     </button>
                     <button
                       onClick={this.saveBtnPressed}
                       className={saved ? 'active' : ''}
+                      aria-label="Save"
                     >
                       <FaRegSave className="icon-s" />
                     </button>

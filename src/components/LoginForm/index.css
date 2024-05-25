@@ -9,6 +9,18 @@
   }
 }
 
+.learn-more-link,
+.help-link {
+  background: none;
+  border: none;
+}
+.help-link {
+  color: #0071eb;
+}
+.help-link:hover {
+  text-decoration: underline;
+}
+
 .login-form-container {
   background: #000;
   position: relative;
