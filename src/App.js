@@ -21,25 +21,25 @@ import './App.css'
 
 const App = () => (
   <BrowserRouter>
-    <div className='App'>
+    <div className="App">
       <Switch>
-        <Route path='/login' component={LoginForm} />
-        <ProtectedRoute exact path='/' component={Home} />
-        <ProtectedRoute exact path='/videos/:id' component={HomeDetails} />
-        <ProtectedRoute exact path='/movies' component={Movies} />
-        <ProtectedRoute exact path='/movies/:id' component={MovieDetails} />
-        <ProtectedRoute exact path='/games' component={Games} />
-        <ProtectedRoute exact path='/games/:id' component={GameDetails} />
-        <ProtectedRoute exact path='/courses' component={Courses} />
-        <ProtectedRoute exact path='/courses/:id' component={CoursesDetails} />
-        <ProtectedRoute exact path='/trending' component={Trending} />
+        <Route path="/login" component={LoginForm} />
+        <ProtectedRoute exact path="/" component={Home} />
+        <ProtectedRoute exact path="/videos/:id" component={HomeDetails} />
+        <ProtectedRoute exact path="/movies" component={Movies} />
+        <ProtectedRoute exact path="/movies/:id" component={MovieDetails} />
+        <ProtectedRoute exact path="/games" component={Games} />
+        <ProtectedRoute exact path="/games/:id" component={GameDetails} />
+        <ProtectedRoute exact path="/courses" component={Courses} />
+        <ProtectedRoute exact path="/courses/:id" component={CoursesDetails} />
+        <ProtectedRoute exact path="/trending" component={Trending} />
         <ProtectedRoute
           exact
-          path='/trendVideos/:id'
+          path="/trendVideos/:id"
           component={TrendingDetails}
         />
-        <ProtectedRoute exact path='/Sports' component={Sports} />
-        <ProtectedRoute exact path='/saved-videos' component={SavedVideos} />
+        <ProtectedRoute exact path="/Sports" component={Sports} />
+        <ProtectedRoute exact path="/saved-videos" component={SavedVideos} />
         <Route component={NotFound} />
       </Switch>
     </div>

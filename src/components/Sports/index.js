@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import TopNavbar from '../TopNavbar'
 import SideNavbar from '../SideNavbar'
 import './Sports.css'
+
 class Sports extends Component {
   render() {
     return (
