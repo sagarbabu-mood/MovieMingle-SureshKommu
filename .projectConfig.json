@@ -1,12 +1,18 @@
 {
   "ignoredFilesOrFolders": [],
   "openFiles": [
-    "nxtWatchApp/src/components/Courses/index.js",
-    "nxtWatchApp/src/components/NotFound/index.js",
-    "nxtWatchApp/src/components/Sports/index.js",
-    "nxtWatchApp/src/components/SavedVideos/index.js",
-    "nxtWatchApp/src/components/Sports/Sports.css",
+    "nxtWatchApp/src/components/Movies/index.css",
+    "nxtWatchApp/src/components/TopNavbar/TopNavbar.css",
+    "nxtWatchApp/src/components/TopNavbar/index.js",
+    "nxtWatchApp/src/components/Movies/index.js",
+    "nxtWatchApp/src/components/SideNavbar/index.js",
+    "nxtWatchApp/src/components/Home/index.js",
+    "nxtWatchApp/src/components/Home/index.css",
+    "nxtWatchApp/src/components/MovieDetails/index.js",
+    "nxtWatchApp/src/components/MovieDetails/index.css",
+    "nxtWatchApp/src/components/NotFound/NotFound.css",
+    "nxtWatchApp/src/App.js",
     "nxtWatchApp/src/components/SavedVideos/SavedVideos.css"
   ],
-  "fileToBeOpened": "nxtWatchApp/src/components/MovieDetails/index.js"
+  "fileToBeOpened": "nxtWatchApp/src/components/SideNavbar/SideNavbar.css"
 }

@@ -72,3 +72,34 @@
 .item-link {
   text-decoration: none;
 }
+
+@media only screen and (min-width: 576px) {
+  .movie_img {
+    border-radius: 15px;
+    width: 340px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 575px) {
+  .movie_img {
+    border-radius: 15px;
+    width: 240px;
+    height: 150px;
+  }
+
+  .channelName {
+    width: 25px;
+    height: 25px;
+  }
+  .videoTitle {
+    font-size: 15px;
+  }
+  .videoChanle {
+    font-size: 12px;
+  }
+  .viewCount,
+  .date {
+    font-size: 10px;
+  }
+}

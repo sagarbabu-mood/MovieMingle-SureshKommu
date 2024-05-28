@@ -99,7 +99,7 @@ li h3 {
   padding-left: 10px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
   .symbolStyle {
     width: 15px;
     height: 15px;
@@ -117,5 +117,49 @@ li h3 {
     width: 18px; /* Adjust as needed */
     height: 18px; /* Adjust as needed */
     margin: 2px;
+  }
+  .list-item:hover {
+    width: 120px;
+    height: 30px;
+  }
+}
+
+.mainNavbar {
+  display: block; /* Hide the main navbar on small screens */
+}
+
+.secondNavbar {
+  display: none; /* Show the second navbar on small screens */
+}
+
+@media (max-width: 575px) {
+  .mainNavbar {
+    display: none; /* Hide the main navbar on small screens */
+  }
+
+  .secondNavbar {
+    display: block; /* Show the second navbar on small screens */
+  }
+
+  .link-item {
+    text-decoration: none;
+    color: black;
+    display: flex;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: -20px;
+  }
+
+  .list-item:hover {
+    background-color: #ebebeb;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding-left: 13px;
+  }
+  .list-item-small {
+    margin-top: 60px;
   }
 }

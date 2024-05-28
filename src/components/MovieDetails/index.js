@@ -16,10 +16,46 @@ class MovieDetails extends Component {
     liked: false,
     disliked: false,
     saved: false,
+    iframeWidth: 1000,
+    iframeHeight: 400,
   }
 
   componentDidMount() {
     this.fetchMovie()
+    this.handleWindowSizeChange() // Set initial iframe width and height
+    window.addEventListener('resize', this.handleWindowSizeChange)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange)
+  }
+
+  handleWindowSizeChange = () => {
+    const {innerWidth} = window
+    let width = 1000
+    let height = 400
+
+    if (innerWidth >= 1200) {
+      width = 950 // Your width for screens ≥1200px
+      height = 400 // Your height for screens ≥1200px
+    } else if (innerWidth >= 992) {
+      width = 750 // Your width for screens ≥992px
+      height = 330 // Your height for screens ≥992px
+    } else if (innerWidth >= 768) {
+      width = 550 // Your width for screens ≥768px
+      height = 230 // Your height for screens ≥768px
+    } else if (innerWidth >= 576) {
+      width = 380 // Your width for screens ≥576px
+      height = 200 // Your height for screens ≥576px
+    } else {
+      width = 240 // Your width for screens <576px
+      height = 150 // Your height for screens <576px
+    }
+
+    this.setState({
+      iframeWidth: width,
+      iframeHeight: height,
+    })
   }
 
   fetchMovie = async () => {
@@ -58,7 +94,15 @@ class MovieDetails extends Component {
   }
 
   renderContent = () => {
-    const {error, videos, liked, disliked, saved} = this.state
+    const {
+      error,
+      videos,
+      liked,
+      disliked,
+      saved,
+      iframeWidth,
+      iframeHeight,
+    } = this.state
 
     if (error) {
       return <div>Error: {error}</div>
@@ -69,8 +113,8 @@ class MovieDetails extends Component {
         <div className="trailer-container">
           <iframe
             title="movie-trailer"
-            width="1000px"
-            height="400"
+            width={iframeWidth}
+            height={iframeHeight}
             src={videos.movie_trailer}
             frameBorder="0"
             allowFullScreen

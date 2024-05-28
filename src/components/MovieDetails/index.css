@@ -5,7 +5,7 @@
 }
 
 .iframe {
-  margin-right: 30px;
+  margin-right: 0px;
   border-radius: 5px;
 }
 
@@ -65,4 +65,52 @@
 
 .commentOne {
   margin: 0px;
+}
+
+@media (max-width: 575px) {
+  .channelName {
+    width: 25px;
+    height: 25px;
+  }
+  .videoTitle {
+    font-size: 15px;
+  }
+  .videoChanle {
+    font-size: 12px;
+  }
+  .viewCount,
+  .date {
+    font-size: 10px;
+  }
+  .comment-user-prfile {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+  .movie-deatils-down {
+    width: 80vw;
+  }
+  .icon-l,
+  .icon-d,
+  .icon-s {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+  }
+  /* .movie-details {
+    margin-top: 50px;
+    margin-left: 30px;
+    height: 1000px;
+  } */
+  .commentOne {
+    font-size: 10px;
+  }
+  .icon-l,
+  .icon-d,
+  .icon-s {
+    margin-left: -10px;
+  }
+  .like-dislike-save {
+    padding-left: -10px;
+  }
 }

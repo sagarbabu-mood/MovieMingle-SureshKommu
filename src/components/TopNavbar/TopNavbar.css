@@ -70,11 +70,13 @@
   height: 30px;
   color: #00306e;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .hedaing-logo {
   display: flex;
   font-family: cursive;
+  margin-right: 10px;
 }
 .first-heading {
   color: white;
@@ -160,5 +162,90 @@
     height: 20px;
     color: #00306e;
     margin-right: 10px;
+  }
+
+  .search-container {
+    width: 350px;
+    height: 28px;
+    border-radius: 15px;
+  }
+  .serachBar {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+.mainNavbar {
+  display: block; /* Hide the main navbar on small screens */
+}
+
+.secondNavbar {
+  display: none; /* Show the second navbar on small screens */
+}
+
+@media (max-width: 575px) {
+  .mainNavbar {
+    display: none; /* Hide the main navbar on small screens */
+  }
+
+  .secondNavbar {
+    display: block; /* Show the second navbar on small screens */
+  }
+
+  .hedaing-logo {
+    display: flex;
+    font-family: cursive;
+    margin-right: 10px;
+  }
+  .first-heading {
+    font-size: 10px;
+    margin-left: 15px;
+    padding: 3px;
+  }
+
+  .sec-heading {
+    font-size: 10px;
+    margin-left: 5px;
+    padding: 3px;
+  }
+
+  .logoutBtn {
+    width: 55px;
+    height: 24px;
+    margin-right: -5px;
+    font-size: 10px; /* Set font size */
+  }
+
+  .user-prf {
+    width: 18px;
+    height: 18px;
+  }
+
+  .search-container {
+    width: 200px;
+    height: 24px;
+    border-radius: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .serachBar {
+    font-size: 8px;
+    padding: 3px;
+  }
+
+  .popup-content {
+    width: 140px; /* Adjust width as needed */
+    border-radius: 6px;
+    font-size: 10px;
+  }
+  .confirm-btn,
+  .cancel-btn {
+    padding: 4px 12px; /* Adjust padding as needed */
+    margin-bottom: 5px;
+    margin-top: 5px; /* Adjust margin as needed */
+    font-size: 8px;
   }
 }
